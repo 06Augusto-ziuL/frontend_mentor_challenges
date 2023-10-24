@@ -27,7 +27,7 @@ section {
     height: 670px;
     width: 370px;
     margin: 50px;
-    box-shadow: 0px 0px 10px hsl(218, 22%, 67%);
+    box-shadow: 0px 5px 10px hsl(218, 22%, 67%);
     border-radius: 5px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -88,7 +88,7 @@ div#sign > a {
     display: block;
     background-color: hsl(71, 73%, 54%);
     height: 45px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px darkcyan;
     text-decoration: none;
@@ -110,6 +110,7 @@ div#why {
     display: block;
     border-radius: 0px 0px 5px 5px;
     margin-bottom: 10px;
+    
 }
 
 div#why > p > small {
