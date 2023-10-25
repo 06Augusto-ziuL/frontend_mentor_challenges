@@ -1,6 +1,46 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 768.1px){
+@media screen and (min-width: 768.01px) {
+    
+    section {
+        width: 600px;
+        height: 450px;
+        font-size: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "join join"
+        "subs why"
+        ;
+    }
+
+    div#join{
+        padding: 20px;
+    }
+
+    div#join > h2 {
+        margin-bottom: 10px;
+    }
+
+    div#join > p {
+        line-height: 25px;
+        text-align: left;
+    }
+
+    div#sign {
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    div#sign > a {
+        height: 50px;
+    }
+
+    div#why {
+        border-radius: 0px 0px 5px 0px;
+    }
+}
+
+@media screen and (min-width: 992.01px){
     section {
         width: 768px;
         height: 500px;
