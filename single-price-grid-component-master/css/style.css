@@ -25,7 +25,7 @@ section {
     background-color: white;
     font-size: clamp(5px, 13px, 15px);
     height: 650px;
-    max-width: 370px;
+    max-width: 350px;
     box-shadow: 0px 5px 10px hsl(218, 22%, 67%);
     border-radius: 5px;
     display: grid;
