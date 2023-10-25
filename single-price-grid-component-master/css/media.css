@@ -3,9 +3,9 @@
 @media screen and (min-width: 768.01px) {
     
     section {
-        width: 600px;
+        max-width: 550px;
         height: 450px;
-        font-size: 15px;
+        font-size: clamp(13px, 14px);
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: 
@@ -31,8 +31,13 @@
         border-radius: 0px 0px 0px 5px;
     }
 
+    div#sign > h2 {
+        margin-bottom: 15px;
+    }
+
     div#sign > a {
         height: 50px;
+        margin-top: 20px;
     }
 
     div#why {
@@ -42,7 +47,7 @@
 
 @media screen and (min-width: 992.01px){
     section {
-        width: 768px;
+        max-width: 800px;
         height: 500px;
         font-size: 15px;
         grid-template-columns: repeat(2, 1fr);
