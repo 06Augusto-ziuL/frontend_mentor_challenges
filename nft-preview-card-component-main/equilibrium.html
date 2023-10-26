@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | NFT preview card component</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        main {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-rows: 10px calc(100vh - 10px);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            'exit exit exit'
+            'photo photo photo';
+            align-items: center;
+            justify-content: center;
+        }
+
+        div#exit{
+            grid-area: exit;
+        }
+
+        div#exit > a {
+            position: relative;
+            top: 30px;
+            right: 70px;
+            display: block;
+            text-decoration: none;
+            font-weight: bolder;
+            text-align: right;
+            align-self: baseline;
+            color: white;
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#photo {
+            grid-area: photo;
+            text-align: center;
+        }
+
+        main > div > img {
+            height: 60%;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="exit">
+            <a href="index.html">X</a>
+        </div>
+        <div id="photo">
+            <img src="images/image-equilibrium.jpg" alt="">
+        </div>
+    </main>
+</body>
+</html>
