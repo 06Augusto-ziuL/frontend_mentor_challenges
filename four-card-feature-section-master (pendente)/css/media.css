@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 992px) {
+    header > p {
+        width: 500px;
+        display: block;
+        margin: 30px auto;
+    }
+    
+    section#container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        'supervisor teambuilder calculator'
+        'supervisor karma calculator';
+        gap: 30px;
+    }
+
+    section#container > div {
+        max-width: 300px;
+    }
+
+    div#supervisor {
+        grid-area: supervisor;
+        align-self: center;
+    }
+
+    div#teambuilder {
+        grid-area: teambuilder;
+    }
+
+    div#calculator {
+        grid-area: calculator;
+        align-self: center;
+    }
+
+    div#karma {
+        grid-area: karma;
+    }
+}
