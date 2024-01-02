@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: worksans;
+    src: url(../../assets/fonts/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: worksans-semibold;
+    src: url(../../assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: worksans-bold;
+    src: url(../../assets/fonts/static/WorkSans-Bold.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h2, h3, p {
+    margin: 15px;
+} 
+
+h2 {
+    color: hsl(292, 42%, 14%);
+}
+
+h3 {
+    font-family: worksans-semibold;
+}
+
+p {
+    font-family: worksans;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: hsl(292, 16%, 49%);
+    text-shadow: 0.1px 0.1px black; 
+}
+
+body {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    font-family: worksans;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url(../../assets/images/background-pattern-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+section#info {
+    display: grid;
+    width: 80%;
+    min-width: 200px;
+    max-width: 600px;
+    background-color: white;
+    color: hsl(292, 42%, 14%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px hsl(292, 16%, 49%);
+}
+
+section#info > h2 {
+    font-family: worksans-bold;
+    font-size: 2.5em;
+}
+
+section#info > div {
+    border-top: 2px solid hsl(275, 100%, 97%);
+    cursor: pointer;
+    color: hsl(292, 42%, 14%);
+}
+
+section#info > div:hover {
+    color: #AD28EB;
+}
+
+section#info > div#content1 {
+    border: none;
+}
+
+section#info > h2 > img {
+    width: 25px;
+    height: 30px;
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+}
+
+section#info > div > h3 {
+    display: flex;
+    column-gap: 10px;
+    font-size: 1.2em;
+    padding: 10px 0px;
+    position: relative;
+    top: 5px;
+    justify-content: space-between;
+}
+
+section#info > div > h3 > button {
+    position: relative;
+}
+
+p#whatIs {
+    font-weight: bolder;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    bottom: 3px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+         background-image: url(../../assets/images/background-pattern-desktop.svg);
+    }
+
+    section#info > h2 {
+        font-size: 3.5em;
+    }
+
+    section#info > h2 > img {
+        height: 45px;
+        width: 50px;
+    }
+}
