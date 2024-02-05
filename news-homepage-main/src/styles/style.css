@@ -64,6 +64,10 @@ body > header > nav {
     background-color: var(--Off-white);
 }
 
+body > header > nav::-webkit-scrollbar {
+    display: block;
+}
+
 body > header > nav > span {
     justify-self: right;
     padding: 30px;
