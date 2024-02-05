@@ -56,7 +56,7 @@ body > header > nav {
     top: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
+    overflow: auto;
     height: 100vh;
     width: 0px;
     max-width: 350px;
