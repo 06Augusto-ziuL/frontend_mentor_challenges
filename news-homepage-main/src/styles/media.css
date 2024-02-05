@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* @media screen and (min-width: 1500px) {
+    main#container {
+        height: 100%;
+    }
+} */
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 50px 200px;
+        display: grid;
+        align-items: center;
+    }
+
+    body > header > span {
+        display: none;
+    }
+
+    body > header > menu {
+        padding: 10px;
+        display: block;
+    }
+    
+    menu > ul > li{
+        list-style-type: none;
+        display: inline;
+    }
+    
+    menu a {
+        padding: 0px 10px;
+        text-decoration: none;
+        color: var(--Very-dark-blue);
+    }
+    
+    menu  a:hover {
+        color: var(--Soft-red);
+    }
+
+    body > main#container {
+        height: 100%;
+        max-width: 992px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "imagemG imagemG novo"
+        "futureWeb textoP novo"
+        "interesting interesting interesting";
+        gap: 20px;
+    }
+
+
+    div#geometricImage {
+        background-image: url(../../assets/images/image-web-3-desktop.jpg);
+        grid-area: imagemG;
+        height: 100%;
+    }
+
+    body > main#container > h1#titulo {
+        grid-area: futureWeb;
+        align-self: center;
+        font-size: 5vh;
+        height: 100%;
+    }
+
+    body > main#container > div#textContent {
+        grid-area: textoP;
+        align-self: center;
+    }
+
+    body > main#container > section#new {
+        grid-area: novo;
+        height: 100%;
+    }
+
+    body > main#container > section#interesting {
+        grid-area: interesting;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "Retro Laptop gameGrowth";
+        gap: 20px;
+    }
+
+    body > main#container > section#interesting > aside#retroPc {
+        grid-area: Retro;
+    }
+
+    body > main#container > section#interesting > aside#laptops {
+        grid-area: Laptop;
+    }
+
+    body > main#container > section#interesting > aside#gaming {
+        grid-area: gameGrowth;
+    }
+}
