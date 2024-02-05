@@ -1,18 +1,6 @@
 @charset "UTF-8";
 
-/* @media screen and (min-width: 1500px) {
-    main#container {
-        height: 100%;
-    }
-} */
-
-@media screen and (min-width: 1200px) {
-    body {
-        padding: 50px 200px;
-        display: grid;
-        align-items: center;
-    }
-
+@media screen and (min-width: 768px) {
     body > header > span {
         display: none;
     }
@@ -35,6 +23,14 @@
     
     menu  a:hover {
         color: var(--Soft-red);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 50px 200px;
+        display: grid;
+        align-items: center;
     }
 
     body > main#container {
