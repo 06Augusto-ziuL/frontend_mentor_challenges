@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --bordergradient1: hsl(249, 99%, 64%);
+    --bordergradient2: hsl(278, 94%, 30%);
+    --inputerrors: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --Lightgrayishviolet: hsl(270, 3%, 87%);
+    --Darkgrayishviolet: hsl(279, 6%, 55%);
+    --Verydarkviolet: hsl(278, 68%, 11%);
+    --font: "Space Grotesk"
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+aside {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 100px;
+    display: grid;
+    justify-content: center;
+    background-image: url(../../images/bg-main-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div#box {
+    width: 100%;
+    position: relative;
+    left: 20px;
+    display: grid;
+    justify-items: center;
+}
+
+div#card-front {
+    position: relative;
+    top: -25px;
+    left: -50px;
+    display: grid;
+    align-items: center;
+    height: 150px;
+    width: 280px;
+    background-image: url(../../images/bg-card-front.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    padding: 15px;
+    color: var(--white);
+    overflow: hidden ;
+}
+
+p#littleinfo {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    height: 15px;
+    padding: 5px 0px;
+    grid-template-areas:
+    'name name name date';
+    width: 100%;
+}
+
+div#card-front > img {
+    height: 60px;
+    width: 73.5px;
+    padding-bottom: 20px;
+}
+
+div#card-front > p#cnumber {
+    font-weight: 400;
+    width: 100%;
+    font-size: 18px;
+}
+
+div#card-front > p#littleinfo > sub#cname, sub#expdate {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 9px;
+}
+
+div#card-front > p#littleinfo > sub#cname {
+    grid-area: name;
+}
+
+div#card-front > p#littleinfo > sub#expdate {
+    grid-area: date;
+    justify-self: end;
+    width: fit-content;
+}
+
+div#card-back {
+    position: relative;
+    top: 40px;
+    right: -5px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 280px;
+    background-image: url(../../images/bg-card-back.png);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px;
+    padding: 15px;
+    color: var(--white);
+}
+
+div#card-back > sub {
+    width: 200px;
+    height: 18px;
+    text-align: right;
+    font-size: 12px;
+}
+
+section#inputs {
+    display: grid;
+    width: 100%;
+    gap: 0px 10px;
+    padding: 50px 20px;
+    margin-top: -60px;
+    height: 550px;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "cn cn cn cn"
+    "cardname cardname cardname cardname"
+    "nameError nameError nameError nameError"
+    "cnum cnum cnum cnum"
+    "cardnumber cardnumber cardnumber cardnumber"
+    "numberError numberError numberError numberError"
+    "exp exp ln ln"
+    "mm yy cvc cvc"
+    "monthError yearError cvcError cvcError"
+    "confirm confirm confirm confirm";
+}
+
+.error {
+    color: red;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 5px;
+}
+
+sub#nameError {
+    grid-area: nameError
+}
+sub#numberError {
+    grid-area: numberError;
+}
+sub#monthError {
+    grid-area: monthError;
+}
+sub#yearError {
+    grid-area: yearError;
+}
+
+section#inputs > input {
+    height: 50px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: -10px;
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+section#inputs > label {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+#cn {
+    grid-area: cn;
+}
+
+#cardname {
+    grid-area: cardname;
+}
+
+#cnum {
+    grid-area: cnum;
+}
+
+#cardnumber {
+    grid-area: cardnumber;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#exp {
+    grid-area: exp;
+}
+
+#expiration {
+    grid-area: mm;
+}
+#yy {
+    grid-area: yy;
+}
+
+#littlenumbers {
+    grid-area: ln;
+}
+
+#cvc {
+    grid-area: cvc;
+}
+#confirm {
+    grid-area: confirm;
+}
+
+.button {
+    height: 50px;
+    padding: 10px 0px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+    color: var(--Lightgrayishviolet);
+    background-color: var(--Verydarkviolet);
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: hsl(278, 73%, 3%);
+}
+
+div#thanks {
+    width: 100%;
+    display: none;
+    row-gap: 25px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+div#thanks > img {
+    height: 60px;
+    width: 60px;
+}
+
+div#thanks > h1 {
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 450;
+    color: var(--Verydarkviolet);
+    font-family: var(--font);
+}
+
+div#thanks > p {
+    color: var(--Darkgrayishviolet);
+    font-family: var(--font);
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 0px;
+    text-shadow: 0px 0px 3px var(--Lightgrayishviolet);
+}
+
+div#thanks > a {
+    width: 100%;
+    max-width: 500px;
+}
+
+a > button {
+    width: 100%;
+}

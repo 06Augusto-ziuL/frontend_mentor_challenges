@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 992px){
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    main {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "aside aside section section";
+    }
+
+    aside {
+        background-image: url(../../images/bg-main-desktop.png);
+        height: 100vh;
+        width: 60%;
+        max-width: 450px;
+        grid-area: aside;
+        box-shadow: 10px 0px 50px 20px var(--Lightgrayishviolet);
+    }
+    section#inputs {
+        margin-top: -120px;
+        margin-left: 40px;
+        left: -10px;
+        height: 520px;
+        width: 100%;
+        max-width: 400px;
+        grid-area: section;
+    }
+
+    .error {
+        font-size: 11px;
+    }
+
+
+
+    div#card-front {
+        height: 180px;
+        width: 330px;
+        top: -200px;
+        left: 25%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    div#card-front > p#cnumber {
+        font-size: 22px;
+    }
+
+    div#card-back {
+        height: 180px;
+        width: 330px;
+        top: 105%;
+        left: 50%;
+    }
+
+    div#card-back > sub {
+        width: 240px;
+    }
+
+    div#thanks {
+        width: 120%;
+        align-content: center;
+        margin-top: -80px;
+        margin-left: 30px;
+        font-size: 15px;
+    }
+    
+    div#thanks > a {
+        max-width: 450px;
+    }
+
+    div#thanks > a > button {
+        height: 45px;
+        width: 100%;
+        font-size: 15px;
+    }
+}

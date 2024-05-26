@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="src/styles/style.css">
+  <link rel="stylesheet" href="src/styles/media.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main>
+      <aside>
+        <div id="box">
+          <div id="card-back">
+            <sub id="treenumbers">000</sub>
+          </div>
+          <div id="card-front">
+            <img id="logo" src="images/card-logo.svg" alt="card-logo.png">
+            <p id="cnumber">0000 0000 0000 0000</p>
+            <p id="littleinfo"><sub id="cname">Jane Appleseed</sub>
+            <sub id="expdate"><mm>00</mm>/<yy>00</yy></sub></p>
+          </div>
+        </div>
+      </aside>
+    
+      <section id="inputs">
+        <label for="cardname" id="cn">Cardholder Name</label>
+        <input type="text" id="cardname" autocomplete="off" placeholder="e.g. Jane Appleseed" onkeyup="modificarCardName()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40"></input>
+        <sub id="nameError" class="error"></sub>
+
+        <label for="cardnumber" id="cnum">Card Number</label>
+        <input type="text" id="cardnumber" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000" onkeyup="modificarCardNum()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="19"  onkeypress="autoSpace()"></input>
+        <sub id="numberError" class="error"></sub>
+
+        <label for="expiration" id="exp">Exp. Date (MM/YY)</label>
+        <input type="number" id="expiration" min="1" max="12" autocomplete="off" placeholder="MM" onkeyup="mesVenc()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2"></input>
+        <sub id="monthError" class="error"></sub>
+
+        <input type="number" id="yy" autocomplete="off" placeholder="YY" min="00" max="99" onkeyup="anoVenc()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2"></input>
+        <sub id="yearError" class="error"></sub>
+
+        <label for="cvc" id="littlenumbers">CVC</label>
+        <input type="number" id="cvc" autocomplete="off" placeholder="e.g. 123" min="100" max="999" onkeyup="modificarCVC()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3"></input>
+        <sub id="cvcError" class="error"></sub>
+
+        <button id="confirm" class="button" onclick="buttonAction()">Confirm</button>
+      </section>
+      <div id="thanks">
+        <img src="images/icon-complete.svg" alt="complete" id="complete">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <a href="index.html" target="_self"><button class="button">Continue</button></button>
+      </div>
+  </main>
+
+  <script src="src/js/index.js">
+  </script>
+</body>
+</html>
