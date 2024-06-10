@@ -160,7 +160,7 @@ ul > li > a > div {
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     justify-self: center;
     animation: textAppear 0.5s;
 }
@@ -168,7 +168,7 @@ ul > li > a > div {
 #container > #text >  h1 {
     font-family: var(--bellefairFont);
     font-weight: 100;
-    font-size: 7em;
+    font-size: 6em;
     text-align: center;
     text-transform: uppercase;
     padding: 10px 0px 20px 0px;
@@ -183,7 +183,7 @@ ul > li > a > div {
     font-size: 18px;
     line-height: 40px;
     text-align: center;
-    width: 96%;
+    width: 90%;
     justify-self: center;
     animation: textAppear 2s;
 }
