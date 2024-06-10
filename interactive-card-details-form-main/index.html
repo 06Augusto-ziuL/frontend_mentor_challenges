@@ -31,7 +31,7 @@
         <sub id="nameError" class="error"></sub>
 
         <label for="cardnumber" id="cnum">Card Number</label>
-        <input type="text" id="cardnumber" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000" onkeyup="modificarCardNum()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="19"  onkeypress="autoSpace()"></input>
+        <input type="text" id="cardnumber" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000" onkeyup="modificarCardNum()" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="19" onkeypress="autoSpace()"></input>
         <sub id="numberError" class="error"></sub>
 
         <label for="expiration" id="exp">Exp. Date (MM/YY)</label>

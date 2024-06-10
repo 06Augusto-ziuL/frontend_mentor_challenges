@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+@keyframes menuAppear {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes textAppear {
+    0% {
+        color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        color: 100%;
+    }
+}
+
+:root {
+    --BarlowFont: "Barlow", sans-serif;
+    --barlowCondensedFont: "Barlow Condensed", sans-serif;
+    --bellefairFont: "Bellefair", serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../../../assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: grid;
+    justify-items: right;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header > div#logo {
+    justify-self: left;
+    position: relative;
+    top: 40px;
+}
+
+header > div#burger, div#logo {
+    padding: 0px 40px;
+}
+
+header > div#burger:hover {
+    cursor: pointer;
+}
+
+menu {
+    display: none;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 1;
+    padding: 40px;
+    height: 100vh;
+    width: 80%;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+    justify-self: right;
+    animation: menuAppear;
+    animation-duration: 0.35s;
+}
+
+nav > #close {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: right;
+}
+
+nav > ul {
+    list-style-type: none;
+    line-height: 60px;
+    font-size: 1.5em;
+    width: 100%;
+    font-family: var(--barlowCondensedFont);
+    padding: 40px 0px;
+}
+
+nav > ul > li {
+    position: relative;
+    right: 40px;
+    width: 125.8%;
+    max-width: 350px;
+    display: grid;
+}
+
+nav > ul > li:hover, menu > ul > li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color 0.1s;
+}
+
+nav > ul > li.active, menu > ul > li.active {
+    border-left: 7px solid rgb(240, 240, 240);
+}
+
+nav > ul > li > a, menu > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    padding-left: 40px;
+    letter-spacing: 2px;
+}
+
+nav > ul > li > a > strong {
+    margin-right: 10px;
+}
+
+main#container {
+    width: 100%;
+    padding: 40px 0px;
+    display: grid;
+    max-width: 1500px;
+    margin: -30px auto;
+}
+
+#container > h2#spLaunch {
+    font-family: var(--barlowCondensedFont);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 25px;
+    padding: 10px 40px 20px 40px;
+    text-align: center;
+    width: 100%;
+    color: #D0D6F9;
+}
+
+#container > h2#spLaunch > strong {
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: white;
+}
+
+#container > div#image {
+    height: 300px;
+    background-image: url(../../../../assets/technology/image-launch-vehicle-landscape.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+#container > div#links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    text-align: center;
+    padding: 30px 0px 15px 0px;
+}
+
+#container > div#links > a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--bellefairFont);
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+div#links > a#choosen {
+    background-color: white;
+    color: #0B0E17;
+    font-weight: 600;
+}
+
+div#links > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.05s;
+}
+
+#container > div#text {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    padding: 0px 40px;
+}
+
+div#text > h3#technology {
+    font-family: var(--BarlowFont);
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #D0D6F9;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 20px 0px 10px 0px;
+    animation: textAppear 0.5s;
+}
+
+div#text > h1#name {
+    text-transform: uppercase;
+    font-family: var(--bellefairFont);
+    font-weight: 100;
+    font-size: 2.5em;
+    padding: 0px 0px 20px 0px;
+    animation: textAppear 1s;
+}
+
+div#text > p#techInfo {
+    font-family: var(--BarlowFont);
+    font-weight: 100;
+    color: #D0D6F9;
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px;
+    justify-self: center;
+    width: 95%;
+    padding: 0px 20px 30px 20px;
+    animation: textAppear 2s;
+}

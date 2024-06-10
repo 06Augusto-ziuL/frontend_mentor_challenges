@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="src/styles/indexPage/style.css">
+
+  <link rel="stylesheet" href="src/styles/indexPage/media.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body onresize="checkWidth()">
+<header>
+    <div id="logo"><img src="assets/shared/logo.svg" alt="logo"></div>
+
+    <menu id="Menu">
+      <ul>
+        <li class="active">
+          <a href="index.html" target="_self"><strong>00</strong> Home </a>
+        </li>
+        <li>
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li>
+          <a href="crew-commander.html" target="_self"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </menu>
+
+    <div id="burger" onclick="openLateralMenu()"><img src="assets/shared/icon-hamburger.svg" alt="open menu"></div>
+    <nav id="lateralMenu">
+      <div id="close" onclick="closeLateralMenu()"><img src="assets/shared/icon-close.svg" alt="close menu"></div>
+      <ul>
+        <li class="active">
+          <a href="index.html" target="_self"><strong>00</strong> Home </a>
+        </li>
+        <li>
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li>
+          <a href="crew-commander.html" target="_self"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </nav>
+</header>
+<main id="container">
+    <div id="text">
+      <h2 id="travelTo">So, you want to travel to</h2>
+      <h1 id="space">Space</h1>
+      <p>
+        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+      </p>
+    </div>
+    <a href="destination-moon.html" target="_self">
+      <div id="circle">
+        <h2 id="explore">Explore</h2>
+      </div>
+    </a>
+</main>
+<script src="src/js/script.js"></script>
+</body>
+</html>

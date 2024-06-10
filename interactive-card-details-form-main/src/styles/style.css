@@ -174,8 +174,8 @@ sub#yearError {
 
 section#inputs > input {
     height: 50px;
-    border: 1px solid;
-    border-radius: 10px;
+    border: 2px solid var(--Lightgrayishviolet);
+    border-radius: 0.5em;
     padding: 15px;
     margin-top: -10px;
     font-family: var(--font);
@@ -183,6 +183,10 @@ section#inputs > input {
     font-weight: 500;
 }
 
+section#inputs > input:focus {
+    outline: none;
+    border: 2px solid var(--bordergradient1);
+}
 
 section#inputs > label {
     margin-top: 5px;

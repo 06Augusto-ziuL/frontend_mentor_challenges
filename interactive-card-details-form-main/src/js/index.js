@@ -25,7 +25,7 @@ function modificarCardNum() {
 function autoSpace() {
     var numeroNoInput = document.querySelector('input#cardnumber')
     let inputlength = numeroNoInput.value.length
-    if (inputlength === 4 || inputlength === 9 || inputlength === 14) {
+    if (inputlength == 4 || inputlength == 9 || inputlength == 14) {
         numeroNoInput.value += ' '
     }
 }

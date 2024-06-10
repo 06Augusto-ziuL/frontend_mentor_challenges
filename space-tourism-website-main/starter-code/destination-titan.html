@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="src/styles/destination/style.css">
+
+  <link rel="stylesheet" href="src/styles/destination/media.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body onresize="checkWidth()">
+  <header>
+    <div id="logo"><img src="assets/shared/logo.svg" alt="logo"></div>
+
+    <menu id="Menu">
+      <ul>
+        <li>
+          <a href="index.html" target="_self"><strong>00</strong> Home</a>
+        </li>
+        <li class="active">
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li>
+          <a href="crew-commander.html" target="_self"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </menu>
+
+    <div id="burger" onclick="openLateralMenu()"><img src="assets/shared/icon-hamburger.svg" alt="open menu"></div>
+    <nav id="lateralMenu">
+      <div id="close" onclick="closeLateralMenu()"><img src="assets/shared/icon-close.svg" alt="close menu"></div>
+      <ul>
+        <li>
+          <a href="index.html" target="_self"><strong>00</strong> Home </a>
+        </li>
+        <li class="active">
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li>
+          <a href="crew-commander.html" target="_self"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="container">
+      <h2 id="pick">01 <strong>Pick your destination</strong></h2>
+      <div id="infos">
+        
+        <div id="image">
+          <img src="assets/destination/image-titan.png" alt="titan">
+        </div>
+        <ul id="options">
+          <li ><a href="destination-moon.html" target="_self">Moon</a></li>
+          <li ><a href="destination-mars.html" target="_self">Mars</a></li>
+          <li ><a href="destination-europa.html" target="_self">Europa</a></li>
+          <li id="choose"><a href="destination-titan.html" target="_self">Titan</a></li>
+        </ul>
+          <div id="texts">
+            <h1 id="destination">Titan</h1>
+            <p id="text">
+              The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+            </p>
+            <div id="travelInfo">
+              <div id="distance">
+                <h3>Avg. distance</h3>
+                <p>1.6 bil. km</p>
+              </div>
+              <div id="time">
+                <h3>Est. travel time</h3>
+                <p>7 years</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </main>
+  <script src="src/js/script.js"></script>
+</body>
+</html>

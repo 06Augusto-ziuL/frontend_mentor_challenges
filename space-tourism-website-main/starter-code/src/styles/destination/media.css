@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url(../../../assets/destination/background-destination-tablet.jpg);
+    }
+
+    #burger {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        width: 70%;
+        max-width: 550px;
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(25px);
+        position: relative;
+        bottom: 28px;
+        padding: 1px 50px;
+        border-radius: 6px 0px 0px 6px;
+    }
+    menu > ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0px;
+        margin-left: -20px;
+        list-style-type: none;
+    }
+
+    menu > ul > li > a {
+        padding-left: 0px;
+    }
+
+    menu > ul > li > a > strong {
+        display: none;
+        margin-right: 10px;
+    }
+
+    menu > ul > li {
+        width: fit-content;
+        padding: 30px 0px;
+        position: unset;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--BarlowFont);
+        font-size: 13px;
+    }
+
+    menu > ul > li.active {
+        border-left: none;
+        border-bottom: 5px solid white;
+    }
+
+    menu > ul > li > a {
+        height: 100%;
+        padding: 32px 20px ;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url(../../../assets/destination/background-destination-desktop.jpg);
+    }
+
+    menu {
+        width: 70%;
+        max-width: 700px;
+        bottom: 35px;
+    }
+
+    menu > ul > li {
+        padding: 0px;
+    }
+
+    menu > ul > li > a {
+        display: flex;
+    }
+
+    menu > ul > li > a > strong {
+        display: block;
+    }
+
+    body > main#container {
+        height: 80%;
+        max-width: 1500px;
+        margin: -30px auto;
+    }
+
+    #pick {
+        margin-top: -20px;
+        margin-left: 50px;
+    }
+
+    #pick > strong {
+        margin-left: 10px;
+    }
+
+    #infos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        'image destinations'
+        'image texts'
+        'image texts'
+        ;
+    }
+
+    #infos > #image {
+        grid-area: image;
+        height: 100%;
+        width: 100%;
+    }
+
+    #image > img {
+        height: 350px;
+        width: 350px;
+    }
+
+
+    #infos > ul {
+        grid-area: destinations;
+        height: 80px;
+        width: 60%;
+        justify-self: left;
+        margin-top: -30px;
+    }
+
+    #infos > #texts {
+        grid-area: texts;
+        margin-top: -80px;
+    }
+
+    #infos > #texts > #destination {
+        justify-self: left;
+        font-size: 6em;
+    }
+
+    #infos > #texts > #text {
+        justify-self: left;
+        text-align: justify;
+        line-height: 30px;
+    }
+
+    #infos > #texts > #travelInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #infos > #texts > #travelInfo > #distance {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    #travelInfo  h3 {
+        margin-top: -20px;
+    } 
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}

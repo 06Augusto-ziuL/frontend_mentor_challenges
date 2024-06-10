@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="src/styles/crew/style.css">
+
+  <link rel="stylesheet" href="src/styles/crew/media.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body onresize="checkWidth()">
+  <header>
+    <div id="logo"><img src="assets/shared/logo.svg" alt="logo"></div>
+
+    <menu id="Menu">
+      <ul>
+        <li>
+          <a href="index.html" target="_self"><strong>00</strong> Home</a>
+        </li>
+        <li >
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li class="active">
+          <a href="crew-commander.html" target="_blank"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </menu>
+
+    <div id="burger" onclick="openLateralMenu()"><img src="assets/shared/icon-hamburger.svg" alt="open menu"></div>
+    <nav id="lateralMenu">
+      <div id="close" onclick="closeLateralMenu()"><img src="assets/shared/icon-close.svg" alt="close menu"></div>
+      <ul>
+        <li>
+          <a href="index.html" target="_self"><strong>00</strong> Home </a>
+        </li>
+        <li >
+          <a href="destination-moon.html" target="_self"><strong>01</strong> Destination</a>
+        </li>
+        <li class="active">
+          <a href="crew-commander.html" target="_self"><strong>02</strong> Crew</a>
+        </li>
+        <li>
+          <a href="technology-vehicle.html" target="_self"><strong>03</strong> Technology</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="container">
+      <h2 id="meet">02 <strong>Meet your crew</strong></h2>
+      <div id="image">
+        <a href="crew-specialist.html" target="_self"><img src="assets/crew/arrow-back.svg" alt="back"></a>
+        <img src="assets/crew/image-victor-glover.png" alt="crewmate" width="90%">
+        <a href="crew-engineer.html" target="_self"><img src="assets/crew/arrow-forward.svg" alt="forward"></a>
+      </div>
+      <ul id="littleBalls">
+        <li><a href="crew-commander.html" target="_self"><div ></div></a></li>
+        <li><a href="crew-specialist.html" target="_self"><div ></div></a></li>
+        <li><a href="crew-pilot.html" target="_self"><div id="active"></div></a></li>
+        <li><a href="crew-engineer.html" target="_self"><div></div></a></li>
+      </ul>
+      <div id="text">
+        <h3 id="function">Pilot</h3>
+        <h1 id="name">Victor Glover</h1>
+        <p id="crewInfo">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.
+        </p>
+      </div>
+  </main>
+  <script src="src/js/script.js"></script>
+</body>
+</html>

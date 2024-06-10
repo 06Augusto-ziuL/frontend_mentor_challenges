@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url(../../../assets/crew/background-crew-tablet.jpg);
+    }
+
+    #burger {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        width: 70%;
+        max-width: 550px;
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(25px);
+        position: relative;
+        bottom: 28px;
+        padding: 1px 50px;
+        border-radius: 6px 0px 0px 6px;
+    }
+    menu > ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0px;
+        margin-left: -20px;
+        list-style-type: none;
+    }
+
+    menu > ul > li > a {
+        padding-left: 0px;
+    }
+
+    menu > ul > li > a > strong {
+        display: none;
+        margin-right: 10px;
+    }
+
+    menu > ul > li {
+        width: fit-content;
+        padding: 30px 0px;
+        position: unset;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--BarlowFont);
+        font-size: 13px;
+    }
+
+    menu > ul > li.active {
+        border-left: none;
+        border-bottom: 5px solid white;
+    }
+
+    menu > ul > li > a {
+        height: 100%;
+        padding: 32px 20px ;
+    }
+
+    #container > div#image {
+        justify-content: space-around;
+    }
+
+    #container > ul {
+        width: 25%;
+    }
+
+    #container > div#text > h1#name{
+        font-size: 3.5em;
+    }
+
+    #container > div#text > p#crewInfo{
+        font-size: 19px;
+        width: 90%;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url(../../../assets/crew/background-crew-desktop.jpg);
+    }
+
+    menu {
+        width: 70%;
+        max-width: 700px;
+        bottom: 35px;
+    }
+
+    menu > ul > li {
+        padding: 0px;
+    }
+
+    menu > ul > li > a {
+        display: flex;
+    }
+
+    menu > ul > li > a > strong {
+        display: block;
+    }
+
+    main#container {
+        padding: 0px 40px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:repeat(4, 1fr);
+        grid-template-areas: "meet meet"
+        "text image"
+        "text image"
+        "circles image";
+        height: 80%;
+        max-width: 1500px;
+        margin: -20px auto;
+    }
+
+    #container > h2 {
+        grid-area: meet;
+        height: 60px;
+    }
+
+    #container > div#text {
+        grid-area: text;
+    }
+
+    #container > div#text > h1#name {
+        font-size: 3em;
+    }
+
+    #container > div#image{
+        grid-area: image;
+    }
+
+    #container > ul {
+        grid-area: circles;
+    }
+}
