@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --BackgroundColor: hsl(233, 47%, 7%);
+    --CardBgC: hsl(244, 38%, 16%);
+    --FontAccentColor: hsl(277, 64%, 61%);
+    --TitleNStatsColor: hsl(0, 0%, 100%);
+    --ParagraphColor: hsla(0, 0%, 100%, 0.75);
+    --StatsHeadingsColor: hsla(0, 0%, 100%, 0.6);
+    --InterFontStyle: "Inter", sans-serif;
+    --LexendDcFontStyle: "Lexend Deca", system-ui;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--LexendDcFontStyle);
+    font-size: 15px;
+    background-color: var(--BackgroundColor);
+}
+
+main {
+    width: 90%;
+    max-width: 340px;
+    height: 90%;
+    max-height: 820px;
+    border-radius: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--CardBgC);
+    overflow: hidden;
+}
+
+#img {
+    height: 32%;
+    background: linear-gradient(rgba(170, 92, 219, 0.5), hsla(277, 64%, 61%, 0.5)), url(../images/image-header-mobile.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(100%) contrast(150%) brightness(80%) grayscale(10%);
+}
+
+h1 {
+    padding: 10% 5% 5% 5%;
+    font-size: 1.9em;
+    color: var(--TitleNStatsColor);
+}
+
+#accent {
+    color: var(--FontAccentColor);
+}
+
+#MainParagraph {
+    padding: 0 10%;
+    line-height: 24px;
+    color: var(--ParagraphColor);
+    font-family: var(--InterFontStyle);
+    font-weight: 400;
+}
+
+.stat {
+    font-family: var(--LexendFontStyle);
+    font-weight: 300;
+    color: var(--StatsHeadingsColor);
+    letter-spacing: 1px;
+}
+
+.stat > h2 {
+    font-family: var(--InterFontStyle);
+    margin-bottom: -10px;
+    margin-top: 25px;
+    color: var(--TitleNStatsColor);
+}

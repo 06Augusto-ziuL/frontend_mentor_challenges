@@ -1,0 +1,94 @@
+@media screen and (height < 800px) {
+    body {
+        font-size: 11px;
+    }
+
+    main {
+        max-width: 250px;
+        max-height: 750px;
+    }
+
+
+    #img {
+        height: 35%;
+    }
+
+    #MainParagraph {
+        line-height: 20px;
+    }
+
+    .stat > h2 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (width >= 992px) {
+    main {
+        width: 80%;
+        max-width: 1100px;
+        height: 80%;
+        max-height: 450px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "title title title image image image"
+        "paragraph paragraph paragraph image image image"
+        "stats stats stats image image image";
+        text-align: justify;
+    }
+
+    #img {
+        height: 100%;
+        width: 100%;
+        grid-area: image;
+        background: linear-gradient(rgba(170, 92, 219, 0.5), hsla(277, 64%, 61%, 0.5)), url(../images/image-header-desktop.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: saturate(100%) contrast(150%) brightness(80%) grayscale(10%);
+    }
+
+    h1 {
+        grid-area: title;
+        /* border: 1px solid white; */
+        margin: 0px 15% 0 5%;
+        font-size: 2.3em;
+    }
+
+    #MainParagraph {
+        grid-area: paragraph;
+        /* border: 1px solid white; */
+        margin: 0 25% 0 10%;
+        font-size: 15px;
+        line-height: 30px;
+        padding: 0px;
+        color: var(--StatsHeadingsColor);
+    }
+
+    #stats {
+        grid-area: stats;
+        display: grid;
+        /* border: 1px solid white; */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "s1 s2 s3";
+        margin: 0 10%;
+
+    }
+
+    .stat > h2 {
+        font-size: 1.6em;
+    }
+
+    #companies {
+        grid-area: s1;
+    }
+
+    #templates {
+        grid-area: s2;
+    }
+
+    #queries {
+        grid-area: s3;
+    }
+}
