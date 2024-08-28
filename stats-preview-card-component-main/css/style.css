@@ -31,8 +31,6 @@ main {
     max-height: 820px;
     border-radius: 7px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     background-color: var(--CardBgC);
     overflow: hidden;
 }
