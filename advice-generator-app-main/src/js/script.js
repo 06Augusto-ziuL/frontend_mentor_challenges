@@ -8,7 +8,6 @@ function showAdvice(){
         fetch(apiUrl)
         .then((res) => res.json())
         .then((adviceData) => {
-            console.log(adviceData)
             adviceTitleId.innerHTML = adviceData.slip.id
             textSpace.innerHTML = `"${adviceData.slip.advice}"`
         })
