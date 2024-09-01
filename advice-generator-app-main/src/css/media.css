@@ -2,4 +2,7 @@
     main {
         max-width: 500px;
     }
+    #divider {
+        background-image: url(../../images/pattern-divider-desktop.svg);
+    }
 }
