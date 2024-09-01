@@ -30,7 +30,7 @@ main {
     height: 90%;
     max-height: 820px;
     border-radius: 7px;
-    text-align: center;
+    text-align: center; 
     background-color: var(--CardBgC);
     overflow: hidden;
 }
