@@ -1,0 +1,5 @@
+@media screen and (width >= 768px) {
+    main {
+        max-width: 500px;
+    }
+}

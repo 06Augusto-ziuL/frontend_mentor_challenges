@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* copy: font size = 28px */
+
+* {
+    margin: 0px;
+    width: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: hsl(193, 38%, 86%);
+    --title-N-button-color: hsl(150, 100%, 66%);
+    --darkgray-color: hsl(217, 19%, 38%);
+    --box-color:  hsl(217, 19%, 24%);
+    --background-color: hsl(218, 23%, 16%);
+    --textFont: "Manrope", sans-serif;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border: 1px;
+    font-family: var(--textFont);
+    background-color: var(--background-color);
+}
+
+main {
+    height: max-content;
+    width: 90%;
+    max-width: 330px;
+    display: grid;
+    justify-items: center;
+    border-radius: 10px;
+    background-color: var(--box-color);
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+#content h2 {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    width: 100%;
+    margin: 35px 0px;
+    color: var(--title-N-button-color);
+}
+
+#content #advice-text {
+    width: 100%;
+    margin: -10px 0px 15px 0px;
+    padding: 0px 20px 10px 20px;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-color);
+    text-shadow: 0px 0px 3px var(--darkgray-color);
+}
+
+#divider {
+    height: 20px;
+    width: 100%;
+    background-image: url(../../images/pattern-divider-mobile.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    z-index: 2;
+    bottom: -25px;
+    background-color: var(--title-N-button-color);
+    background-image: url(../../images/icon-dice.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 50%;
+}
+
+button:hover {
+    box-shadow: 0px 0px 20px 5px var(--title-N-button-color);
+    transition: box-shadow 0.25s;
+    cursor: pointer;
+}
