@@ -80,7 +80,7 @@ main {
     background-repeat: no-repeat;
 }
 
-button {
+#change-advice-randomly {
     height: 60px;
     width: 60px;
     position: relative;
@@ -94,7 +94,7 @@ button {
     border-radius: 50%;
 }
 
-button:hover {
+#change-advice-randomly:hover {
     box-shadow: 0px 0px 20px 5px var(--title-N-button-color);
     transition: box-shadow 0.25s;
     cursor: pointer;
