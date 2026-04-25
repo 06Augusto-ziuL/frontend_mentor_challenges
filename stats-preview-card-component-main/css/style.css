@@ -95,7 +95,7 @@ body {
 
     p, small {
         font-family: var(--InterFontStyle);   
-}
+    }
     
 }
 
@@ -179,5 +179,5 @@ body {
 
     p, small {
         font-family: var(--InterFontStyle);   
-}
+    }
 }
