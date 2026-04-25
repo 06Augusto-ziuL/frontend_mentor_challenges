@@ -3,75 +3,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
 
 :root {
-    --BackgroundColor: hsl(233, 47%, 7%);
-    --CardBgC: hsl(244, 38%, 16%);
-    --FontAccentColor: hsl(277, 64%, 61%);
-    --TitleNStatsColor: hsl(0, 0%, 100%);
+    --BackgroundColor: hsl(233, 47%, 7%); /* Cor do fundo */
+    --CardBgC: hsl(244, 38%, 16%); /* Background do card */
+    --FontAccentColor: hsl(277, 64%, 61%); /* Destaque da palavra*/
+    --TitleNStatsColor: hsl(0, 0%, 100%); /* Cor do texto principal e valores*/
     --ParagraphColor: hsla(0, 0%, 100%, 0.75);
-    --StatsHeadingsColor: hsla(0, 0%, 100%, 0.6);
-    --InterFontStyle: "Inter", sans-serif;
-    --LexendDcFontStyle: "Lexend Deca", system-ui;
+    --StatsHeadingsColor: hsla(0, 0%, 100%, 0.6); /* Texto abaixo dos valores */
+    --InterFontStyle: "Inter", sans-serif; /* Textos menores */
+    --LexendDcFontStyle: "Lexend Deca", system-ui; /* Fonte principal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    width: 100dvw;
+    min-height: 100dvh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: var(--LexendDcFontStyle);
-    font-size: 15px;
+    justify-content: center;
     background-color: var(--BackgroundColor);
+    font-size: 15px;
+    letter-spacing: 0.5px;
 }
 
-main {
-    width: 90%;
-    max-width: 340px;
-    height: 90%;
-    max-height: 820px;
-    border-radius: 7px;
-    text-align: center; 
-    background-color: var(--CardBgC);
-    overflow: hidden;
+@media screen and (max-width: 999px) {
+    main {
+        width: 80%;
+        max-width: 350px;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: var(--CardBgC);
+    }
+
+    #image {
+        width: 100%;
+        aspect-ratio: 1.45 / 1;
+        background:  linear-gradient(rgba(170, 92, 219, 0.9), rgba(170, 92, 219, 0.9)), url(../images/image-header-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-blend-mode: multiply;
+        filter: contrast(0.9) saturate(1.5) brightness(1);
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section > h1 {
+        text-align: center;
+    }
+
+    section > h1 > strong {
+        color: var(--FontAccentColor);
+        font-weight: 700;
+    }
+
+    section > p {
+        color: var(--ParagraphColor);
+        text-align: center;
+        margin: 20px 15px;
+        line-height: 1.5em;
+    }
+
+    section > h1, .stat > h2 {
+        color: var(--TitleNStatsColor);
+        font-family: var(--LexendDcFontStyle);
+    }
+
+    .stat {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .stat > h2 {
+        font-weight: 500;
+    }
+
+    .stat > small {
+        color: var(--StatsHeadingsColor);
+        text-transform: uppercase;
+    }
+
+    p, small {
+        font-family: var(--InterFontStyle);   
+}
+    
 }
 
-#img {
-    height: 32%;
-    background: linear-gradient(rgba(170, 92, 219, 0.5), hsla(277, 64%, 61%, 0.5)), url(../images/image-header-mobile.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: saturate(100%) contrast(150%) brightness(80%) grayscale(10%);
-}
+@media screen and (min-width: 1000px) {
+    main {
+        width: 90%;
+        max-width: 900px;
+        flex-direction: row-reverse;
+        background-color: var(--CardBgC);
+        display: grid;
+        grid-template-rows: 370px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "textContent image"
+        ;
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-h1 {
-    padding: 10% 5% 5% 5%;
-    font-size: 1.9em;
-    color: var(--TitleNStatsColor);
-}
+    #image {
+        order: 1;
+        grid-area: "image";
+        aspect-ratio: 1 / 1;
+        background:  linear-gradient(rgba(170, 92, 219, 0.9), rgba(170, 92, 219, 0.9)), url(../images/image-header-desktop.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-blend-mode: multiply;
+        filter: contrast(0.9) saturate(1.5) brightness(1);
+    }
 
-#accent {
-    color: var(--FontAccentColor);
-}
+    section {
+        height: 100%;
+        width: 100%;
+        grid-area: "textContent";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 50px 20px 30px;
+    }
 
-#MainParagraph {
-    padding: 0 10%;
-    line-height: 24px;
-    color: var(--ParagraphColor);
-    font-family: var(--InterFontStyle);
-    font-weight: 400;
-}
+    section > h1 {
+        text-align: left;
+    }
 
-.stat {
-    font-family: var(--LexendFontStyle);
-    font-weight: 300;
-    color: var(--StatsHeadingsColor);
-    letter-spacing: 1px;
-}
+    section > h1 > strong {
+        color: var(--FontAccentColor);
+        font-weight: 700;
+    }
 
-.stat > h2 {
-    font-family: var(--InterFontStyle);
-    margin-bottom: -10px;
-    margin-top: 25px;
-    color: var(--TitleNStatsColor);
+    section > p {
+        color: var(--ParagraphColor);
+        text-align: left;
+        line-height: 1.5em;
+        margin: 20px 0px 50px 0px;
+    }
+
+    section > h1, .stat > h2 {
+        color: var(--TitleNStatsColor);
+        font-family: var(--LexendDcFontStyle);
+    }
+
+    #stats {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 50px;
+    }
+
+    .stat {
+        text-align: justify;
+    }
+
+    .stat > h2 {
+        font-weight: 500;
+    }
+
+    .stat > small {
+        color: var(--StatsHeadingsColor);
+        text-transform: uppercase;
+    }
+
+    p, small {
+        font-family: var(--InterFontStyle);   
+}
 }
