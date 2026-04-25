@@ -6,127 +6,169 @@
     font-family: 'Outfit', sans-serif;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+}
 
+@keyframes show-up {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 100;
+    }
 }
 
 body {
-    height: 100vh;
+    min-height: 100dvh;
     width: 100vw;
-    background-color: hsl(217, 54%, 11%);
-}
-
-main {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: hsl(217, 54%, 11%);
-}
-
-section {
-    height: 500px;
-    max-width: 300px;
-    margin: 0px 10px;
-    background-color: hsl(216, 50%, 16%);
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0px 0px 20px hsl(215, 52%, 6%);
-}
-
-section > a > div#img {
-    height: 270px;
-    border-radius: 8px;
-    background-image: url(../images/image-equilibrium.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-a > div#img > svg#view {
-    display: none;
-}
-
-section > a > div#img:hover {
-    background: linear-gradient(rgba(0, 255, 255, 0.5), rgba(0, 255, 255, 0.5)), url(../images/image-equilibrium.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-section > a > div#img:hover > svg#view {
-    display: block;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-section > div#content h2, p {
-    margin: 20px 0px;
-} 
-
-section > div#content > h2 {
-    color: #ffff;
-}
-
-section > div#content > h2:hover {
-    color: cyan;
-    cursor: pointer;
-}
-
-section > div#content > p {
     color: hsl(215, 51%, 70%);
 }
 
-section > div#content > p#values {
-    font-size: 15px;
+section {
+    width: 320px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 0px 20px hsl(215, 52%, 6%);
 }
 
-section > div#content > p#values > strong{
-    color: cyan;
-    margin-right: 100px;
+#image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: green;
+    border-radius: 10px;
+    overflow: hidden;
+    background: url(../images/image-equilibrium.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-section > div#content > p#credit {
-    border-top: 1px solid hsl(215, 32%, 27%);
-    padding: 20px 30px;
+#image > #hoverView {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.5);
+    opacity: 0;
+}
+#image > #hoverView:hover {
+    cursor: pointer;
+    animation: show-up 0.1s;
+    opacity: 100%;
 }
 
-section > div#content > p#credit > img {
-    height: 30px;
-    width: 30x;
-    margin-left: 15px;
-    margin-right: 15px;
-    border: 1px solid white;
+section > h2 {
+    color: white;
+    margin: 15px 0px;
+}
+
+section > h2:hover {
+    cursor: pointer;
+    color: aqua;
+}
+
+section > p {
+    margin-bottom: 15px;
+}
+
+section > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+section > ul > li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+section > ul > #value::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icon-ethereum.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+section > ul > #value {
+    color: aqua;
+}
+
+section > ul > #timeLeft::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-image: url(../images/icon-clock.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+
+hr {
+    opacity: 20%;
+}
+
+#creator {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#creator > img {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
-section > div#content > p#credit > sup > a {
-    text-decoration: none;
-    font-weight: bold;
+#creator > small > strong {
     color: white;
 }
-
-section > div#content > p#credit > sup > a:hover {
-    color: cyan;
+#creator > small > strong:hover {
     cursor: pointer;
+    color: aqua;
 }
 
-@media screen and (width <= 600px) {
-    body {
-        font-size: 13px;
-    }
+#imageViewer {
+    height: 500px;
+    width: 80dvw;
+    max-width: 600px;
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    display: none;
+    animation: show-up 0.25s;
+}
 
-    section > div#content > p#credit > img {
-        height: 20px;
-        width: 20x;
-        margin-left: 0px;
-        margin-right: 5px;
-    }
+#imageViewer > #close {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    height: fit-content;
+    width: fit-content;
+}
 
-    section > div#content > p#credit {
-        font-size: 12px;
-    }
+#imageViewer > #close:hover {
+    cursor: pointer;
+    color: aqua;
 }
